@@ -30,7 +30,9 @@ class LoginActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     LoginScreen(
-                        onLoginClick = { /* Handle login logic */ },
+                        onLoginClick = { val intent = Intent(this, HomePageActivity::class.java)
+                            startActivity(intent)
+                        },
                         onForgotPasswordClick = {
                             startActivity(Intent(this, ForgotPasswordActivity::class.java))
                         },

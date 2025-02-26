@@ -15,6 +15,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".HomePageActivity" />
+
+        <activity android:name=".DonationPageActivity" />
+
+
 
         <activity android:name=".MainActivity"
             android:exported="true">
