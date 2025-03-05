@@ -20,7 +20,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.wedonate.ui.theme.WeDonateTheme
 import com.example.wedonate.utils.NotificationHelper
@@ -33,7 +32,7 @@ class HomePageActivity : ComponentActivity() {
         NotificationHelper.createNotificationChannel(this)
         setContent {
             WeDonateTheme {
-                val viewModel: DonationViewModel by viewModels { DonationViewModelFactory(this) }
+                val viewModel: DonationViewModel by viewModels { DonationViewModelFactory(application) } // Pass `application`
                 HomePageUI(viewModel)
             }
         }
@@ -66,8 +65,8 @@ fun HomePageUI(viewModel: DonationViewModel) {
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    viewModel.addDonationPoints(context, 10) // Adds 10 points per donation
-                    context.startActivity(Intent(context, DonationPageActivity::class.java))
+                    viewModel.addDonationPoints(context,10) // Corrected function call
+                    context.startActivity(Intent(context, DonatePageActivity()::class.java)) // Corrected `context`
                 },
                 containerColor = MaterialTheme.colorScheme.primary
             ) {

@@ -77,4 +77,8 @@ dependencies {
 dependencies {
     implementation ("androidx.core:core-ktx:1.9.0")
 }
+dependencies {
+    implementation ("com.airbnb.android:lottie-compose:6.0.0")
+}
+
 

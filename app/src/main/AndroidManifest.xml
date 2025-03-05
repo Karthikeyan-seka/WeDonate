@@ -17,7 +17,7 @@
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".HomePageActivity" />
 
-        <activity android:name=".DonationPageActivity" />
+        <activity android:name=".DonatePageActivity" />
 
 
 

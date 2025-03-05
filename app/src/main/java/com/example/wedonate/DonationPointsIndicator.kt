@@ -24,3 +24,4 @@ fun DonationPointsIndicator(points: Int) {
         )
     }
 }
+
